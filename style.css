@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&display=swap');
+
+
+@media only screen and (max-device-width: 900px) {
+     .menu { width:600px; } 
+    }
+
+@media only screen and (max-device-width: 700px) {
+        .menu { width:400px; }
+        }
+@media screen and(min-width: 200px) and (max-width: 640px){}
+
+@media screen and (max-width: 380px) and (orientation:portrait){}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif; 
+    scroll-behavior: smooth;
+} 
+
+/* -------------------------- começo nav ------------------------------- */
+
+.menu{
+    position: fixed; 
+    margin: 0;
+    right:0;
+    cursor: pointer;
+    width: 100%;
+    z-index: 1;
+    padding-top: 10px;
+}
+
+.menu ul li{ 
+    display: inline;
+    float: right;
+}
+
+.menu ul li a{
+    color: white;
+    font-weight: bold;
+    padding: 20px;
+    display: inline-block;
+    text-decoration: none;
+    margin-right: 30px;
+    font-size: 30px;
+    text-align: right;
+    text-shadow: 2px 2px black;
+    
+}
+
+.menu ul li a:hover{
+    background-color: #242f33;
+    color: white;  
+    border-radius: 20px;
+    border: 2px solid white;
+}
+
+/* ---------------------- FIM nav ------------------------ */
+/* --------------- começo Pagina inicial ----------------- */
+
+.apresentacao{
+    color: white;
+    height: 100vh;
+    text-align: center;
+    justify-content: center;
+    background-image: url(/img/note2.png);
+    background-repeat: no-repeat;
+    background-position: center ;
+    background-size: cover;
+    padding-top: 10%;
+    font-size: 30px;
+}
+
+ #meunome{
+    top: 20%;
+    animation: anima 3s linear infinite;
+ }
+
+ @keyframes anima {
+    0% {
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(80px); ;
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* ------------------------- FIM pagina inicial----------------------------- */
+/*-------------------------- começo Sobre mim ------------------------------ */
+
+.pincipal-sobremim {
+    height: 100vh;
+    display: flex;
+    padding: 20px;
+    background-color: white;
+    background-image: url(/img/branco.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.minhafoto img {
+    margin-left: 200px;
+    margin-top: 30px;
+    max-width: 100%;
+}
+
+.sobre-mim {
+    margin-right: 20px;
+}
+
+.sobre-mim h1 {
+    margin-top: 0;
+}
+
+
+.habilidade img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.habilidade img{
+    padding: 15px;
+    width: 100px;
+}
+
+/* ---------------------------------- fim Sobre mim ------------------------------ */
+/* --------------------------------- começo Projetos -------------------------------------- */  
+
+.principal-projetos{
+    text-align: center;
+    height: 100vh;
+    right: 30%;
+    color: white;
+    background-image: url(/img/projeto.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 5%;
+    font-size: 30px;
+    /* opacity: 0.8; */
+}
+
+.projeto{
+    display: inline-block;
+    text-align: center;
+    padding: 7%;
+}
+
+.descricao{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+
+/* -------------------------------- FIM Projetos ---------------------------------*/
+/* ------------------------------ começo Contato ---------------------------------*/
+.contato{
+    height: 100vh;
+    position: relative;
+    text-align: center;
+    padding: 100px;
+    padding-top: 50px;
+    background-image: url(/img/branco2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.titulo-contato {
+    font-size: 50px;
+    text-align: center;
+    padding: 3%;
+}
+
+.contato p{
+    font-weight: bold;
+    font-size: 30px;
+    padding: 4px;
+    width: 60%;
+    text-align: center;
+    margin-left: 20%;
+}
+
+.midias-sociais img{
+    width: 150px;
+    padding-top: 20%;
+    padding: 50px;
+}
+
+.contato img:hover{
+    transform: scale(1.5, 1.5);
+}
+
+.curriculo{
+    font-size: 30px;
+    text-align: center;
+    padding-top: 3%;
+}
+
+/* ------------------------------- fim Contato ---------------------------------: */
+/* ------------------------------ começo footer --------------------------------- */
+footer{
+    color: white;
+    background-color: black;
+    padding: 10px;
+    text-decoration: none;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.footer-texto{
+    text-align: center;
+    font-size: 08px;
+    margin-right: 2%;
+ }
+
+/* ------------------------- FIM footer -------------------------------------- */ 
