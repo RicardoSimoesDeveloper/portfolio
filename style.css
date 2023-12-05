@@ -96,8 +96,9 @@
 
 .pincipal-sobremim {
     height: 100vh;
-    display: flex;
     padding: 20px;
+    text-align: center;
+    justify-content: center;
     background-color: white;
     background-image: url(/img/branco.jpg);
     background-repeat: no-repeat;
@@ -105,31 +106,34 @@
     background-size: cover;
 }
 
-.minhafoto img {
-    margin-left: 200px;
-    margin-top: 30px;
-    max-width: 100%;
-}
-
 .sobre-mim {
-    margin-right: 20px;
+    text-align: center;
+    margin-top: 50px;
 }
 
 .sobre-mim h1 {
     margin-top: 0;
+    font-size: 50px;
 }
 
+.sobre-mim p {
+    margin-top: 10px;
+    font-size: 25px;
+    color: black;
+    font-weight: bold;
+    text-shadow: 0.5px 0.5px gray;
+}
+    
+.habilidade{
+    font-size: 40px;
+    margin-top: 40px;
+}
 
 .habilidade img {
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-}
-
-.habilidade img{
-    padding: 15px;
-    width: 100px;
+    width: 80px;
+    height:80px;
+    margin-right: 15px;
+    margin-bottom: 15px;
 }
 
 /* ---------------------------------- fim Sobre mim ------------------------------ */
