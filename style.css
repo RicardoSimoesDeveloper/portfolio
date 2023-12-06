@@ -150,17 +150,21 @@
     background-size: cover;
     padding-top: 5%;
     font-size: 30px;
-    /* opacity: 0.8; */
 }
 
 .projeto{
     display: inline-block;
     text-align: center;
     padding: 7%;
+    width: 300px;
+}
+
+.projeto img{
+    width: 50px;
 }
 
 .descricao{
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
 }
 
