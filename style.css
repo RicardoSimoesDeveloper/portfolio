@@ -132,7 +132,7 @@
 .habilidade img {
     width: 80px;
     height:80px;
-    margin-right: 15px;
+    margin-right: 20px;
     margin-bottom: 15px;
 }
 
@@ -142,30 +142,40 @@
 .principal-projetos{
     text-align: center;
     height: 100vh;
-    right: 30%;
     color: white;
     background-image: url(/img/projeto.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     padding-top: 5%;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .projeto{
     display: inline-block;
     text-align: center;
-    padding: 7%;
-    width: 300px;
+    padding: 5%;
+    width: 450px;
 }
 
 .projeto img{
-    width: 50px;
+    width: 150%;
+    height: 150%;
+    text-align: center;
 }
 
+.projeto h2{
+   margin-left: 100px;
+   margin-bottom: 10px;
+}
 .descricao{
     font-size: 20px;
     font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    width: 150%;
+    text-shadow: 2px 2px black;
+    
 }
 
 
