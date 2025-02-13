@@ -8,7 +8,9 @@
 @media only screen and (max-device-width: 700px) {
         .menu { width:400px; }
         }
-@media screen and(min-width: 200px) and (max-width: 640px){}
+
+@media screen and (min-width: 200px) and (max-width: 640px) { }
+
 
 @media screen and (max-width: 380px) and (orientation:portrait){}
 
@@ -158,8 +160,9 @@
     width: 450px;
 }
 
-.projeto img{
-    width: 150%;
+.projeto img {
+    width: 100%;
+    max-width: 300px; /* Ajuste conforme necessário */
 }
 
 .projeto h2{
