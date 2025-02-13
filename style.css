@@ -1,247 +1,342 @@
+/* ====================== CSS Base ====================== */
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&display=swap');
 
-
-@media only screen and (max-device-width: 900px) {
-     .menu { width:600px; } 
-    }
-
-@media only screen and (max-device-width: 700px) {
-        .menu { width:400px; }
-        }
-
-@media screen and (min-width: 200px) and (max-width: 640px) { }
-
-
-@media screen and (max-width: 380px) and (orientation:portrait){}
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif; 
-    scroll-behavior: smooth;
-} 
-
-/* -------------------------- começo nav ------------------------------- */
-
-.menu{
-    position: fixed; 
-    margin: 0;
-    right:0;
-    cursor: pointer;
-    width: 100%;
-    z-index: 1;
-    padding-top: 10px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
 }
 
-.menu ul li{ 
-    display: inline;
-    float: right;
+/* ---------------------- Menu ---------------------- */
+.menu {
+  position: fixed;
+  right: 0;
+  width: 100%;
+  z-index: 1;
+  padding-top: 10px;
+  background: transparent;
 }
 
-.menu ul li a{
-    color: white;
-    font-weight: bold;
-    padding: 20px;
-    display: inline-block;
-    text-decoration: none;
-    margin-right: 30px;
-    font-size: 30px;
-    text-align: right;
-    text-shadow: 2px 2px black;
-    
+.menu ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  margin-right: 30px;
 }
 
-.menu ul li a:hover{
-    background-color: #242f33;
-    color: white;  
-    border-radius: 20px;
-    border: 2px solid white;
+.menu ul li {
+  margin: 0 15px;
 }
 
-/* ---------------------- FIM nav ------------------------ */
-/* --------------- começo Pagina inicial ----------------- */
-
-.apresentacao{
-    color: white;
-    height: 100vh;
-    text-align: center;
-    justify-content: center;
-    background-image: url(/img/note2.png);
-    background-repeat: no-repeat;
-    background-position: center ;
-    background-size: cover;
-    padding-top: 10%;
-    font-size: 30px;
+.menu ul li a {
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 24px;
+  text-shadow: 2px 2px black;
+  transition: background-color 0.3s, border 0.3s;
 }
 
- #meunome{
-    top: 20%;
-    animation: anima 3s linear infinite;
- }
-
- @keyframes anima {
-    0% {
-        transform: translateY(0);
-    }
-
-    50%{
-        transform: translateY(80px); ;
-    }
-    100% {
-        transform: translateY(0);
-    }
+.menu ul li a:hover {
+  background-color: #242f33;
+  border-radius: 20px;
+  border: 2px solid white;
 }
 
-/* ------------------------- FIM pagina inicial----------------------------- */
-/*-------------------------- começo Sobre mim ------------------------------ */
+/* ------------------ Apresentação ------------------ */
+.apresentacao {
+  color: white;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url(/img/note2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 10%;
+  font-size: 30px;
+}
 
+#meunome {
+  animation: anima 3s linear infinite;
+}
+
+@keyframes anima {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(80px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* -------------------- Sobre Mim -------------------- */
 .pincipal-sobremim {
-    height: 100vh;
-    padding: 20px;
-    text-align: center;
-    justify-content: center;
-    background-color: white;
-    background-image: url(/img/branco.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-.sobre-mim {
-    text-align: center;
-    margin-top: 50px;
+  height: 100vh;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  background-image: url(/img/branco.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .sobre-mim h1 {
-    margin-top: 0;
-    font-size: 50px;
+  font-size: 50px;
+  margin-bottom: 20px;
 }
 
 .sobre-mim p {
-    margin-top: 10px;
-    font-size: 25px;
-    color: black;
-    font-weight: bold;
-    text-shadow: 0.5px 0.5px gray;
+  font-size: 25px;
+  color: black;
+  font-weight: bold;
+  text-shadow: 0.5px 0.5px gray;
+  margin-bottom: 10px;
 }
-    
-.habilidade{
-    font-size: 40px;
-    margin-top: 40px;
+
+/* Habilidades */
+.habilidade {
+  font-size: 40px;
+  margin-top: 40px;
 }
 
 .habilidade img {
-    width: 80px;
-    height:80px;
-    margin-right: 20px;
-    margin-bottom: 15px;
+  width: 80px; 
+  height: auto; 
+  margin-right: 20px;
+  margin-bottom: 15px;
 }
 
-/* ---------------------------------- fim Sobre mim ------------------------------ */
-/* --------------------------------- começo Projetos -------------------------------------- */  
-
-.principal-projetos{
-    text-align: center;
-    height: 100vh;
-    color: white;
-    background-image: url(/img/projeto.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    padding-top: 5%;
-    font-size: 20px;
+/* -------------------- Projetos -------------------- */
+.principal-projetos {
+  text-align: center;
+  height: 100vh;
+  color: white;
+  background-image: url(/img/projeto.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 5%;
+  font-size: 20px;
 }
 
-.projeto{
-    display: inline-block;
-    text-align: center;
-    padding: 5%;
-    width: 450px;
+.projeto {
+  display: inline-block;
+  text-align: center;
+  padding: 5%;
+  width: 450px;
+  vertical-align: top;
+  margin: 20px;
 }
 
 .projeto img {
-    width: 100%;
-    max-width: 300px; /* Ajuste conforme necessário */
+  width: 100%;
+  max-width: 300px; /* ajustável conforme necessidade */
 }
 
-.projeto h2{
-   margin-left: 100px;
-   margin-bottom: 10px;
-}
-.descricao{
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 10px;
-    width: 150%;
-    text-shadow: 2px 2px black;
-    
+.projeto h2 {
+  margin-bottom: 10px;
 }
 
+.descricao {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+  text-shadow: 2px 2px black;
+}
 
-
-/* -------------------------------- FIM Projetos ---------------------------------*/
-/* ------------------------------ começo Contato ---------------------------------*/
-.contato{
-    height: 100vh;
-    position: relative;
-    text-align: center;
-    padding: 100px;
-    padding-top: 50px;
-    background-image: url(/img/branco2.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+/* -------------------- Contato -------------------- */
+.contato {
+  height: 100vh;
+  position: relative;
+  text-align: center;
+  padding: 100px 20px;
+  background-image: url(/img/branco2.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .titulo-contato {
-    font-size: 50px;
-    text-align: center;
-    padding: 3%;
+  font-size: 50px;
+  padding: 3%;
+  margin-bottom: 20px;
 }
 
-.contato p{
-    font-weight: bold;
+.contato p {
+  font-weight: bold;
+  font-size: 30px;
+  padding: 4px;
+  width: 60%;
+  margin: 0 auto 20px;
+}
+
+.midias-sociais img {
+  width: 150px;
+  padding: 50px;
+  transition: transform 0.3s;
+}
+
+.contato img:hover {
+  transform: scale(1.5);
+}
+
+.curriculo {
+  font-size: 30px;
+  padding-top: 3%;
+}
+
+/* -------------------- Footer -------------------- */
+footer {
+  color: white;
+  background-color: black;
+  padding: 10px;
+  text-align: center;
+}
+
+.footer-texto {
+  font-size: 8px;
+}
+
+/* =================== Media Queries =================== */
+
+/* Tablets e dispositivos médios */
+@media (max-width: 1024px) {
+  .menu ul li a {
+    font-size: 20px;
+    padding: 8px;
+  }
+
+  .apresentacao {
+    font-size: 24px;
+    padding-top: 8%;
+  }
+
+  .sobre-mim h1 {
+    font-size: 40px;
+  }
+
+  .sobre-mim p {
+    font-size: 20px;
+  }
+
+  .habilidade {
     font-size: 30px;
-    padding: 4px;
-    width: 60%;
-    text-align: center;
-    margin-left: 20%;
+  }
+
+  .principal-projetos {
+    font-size: 18px;
+    padding-top: 10%;
+  }
+
+  .projeto {
+    width: 90%;
+    display: block;
+    margin: 20px auto;
+  }
+
+  .contato p {
+    font-size: 20px;
+    width: 80%;
+  }
+
+  .titulo-contato {
+    font-size: 40px;
+  }
 }
 
-.midias-sociais img{
-    width: 150px;
-    padding-top: 20%;
-    padding: 50px;
+/* Smartphones - modo retrato */
+@media (max-width: 600px) {
+  .menu ul {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+
+  .menu ul li {
+    margin: 5px 0;
+  }
+
+  .menu ul li a {
+    font-size: 18px;
+    padding: 6px;
+  }
+
+  .apresentacao {
+    font-size: 20px;
+    padding-top: 15%;
+  }
+
+  #meunome h1 {
+    font-size: 36px;
+  }
+
+  #meunome h3 {
+    font-size: 20px;
+  }
+
+  .sobre-mim h1 {
+    font-size: 32px;
+  }
+
+  .sobre-mim p {
+    font-size: 18px;
+  }
+
+  .habilidade img {
+    width: 60px;
+  }
+
+  .principal-projetos {
+    font-size: 16px;
+    padding-top: 10%;
+  }
+
+  .projeto {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .contato p {
+    font-size: 16px;
+    width: 90%;
+  }
+
+  .titulo-contato {
+    font-size: 32px;
+  }
+
+  .midias-sociais img {
+    width: 100px;
+    padding: 20px;
+  }
+
+  .curriculo {
+    font-size: 24px;
+  }
 }
 
-.contato img:hover{
-    transform: scale(1.5, 1.5);
+/* Smartphones - modo paisagem */
+@media (max-width: 800px) and (orientation: landscape) {
+  .apresentacao {
+    font-size: 22px;
+  }
+
+  .menu ul li a {
+    font-size: 18px;
+  }
 }
-
-.curriculo{
-    font-size: 30px;
-    text-align: center;
-    padding-top: 3%;
-}
-
-/* ------------------------------- fim Contato ---------------------------------: */
-/* ------------------------------ começo footer --------------------------------- */
-footer{
-    color: white;
-    background-color: black;
-    padding: 10px;
-    text-decoration: none;
-    bottom: 0;
-    right: 0;
-    left: 0;
-}
-
-.footer-texto{
-    text-align: center;
-    font-size: 08px;
-    margin-right: 2%;
- }
-
-/* ------------------------- FIM footer -------------------------------------- */ 
